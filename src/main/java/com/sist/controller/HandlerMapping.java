@@ -12,8 +12,14 @@ public class HandlerMapping extends DefaultHandler {
 
 	@Override
 	public void startElement(String uri, String localName, String qName, Attributes attributes) throws SAXException {
-		// TODO Auto-generated method stub
-		super.startElement(uri, localName, qName, attributes);
+		try{
+			if(qName.equals("context:component-scan")){
+				String package0=attributes.getValue("base-package");
+				list.add(package0);
+			}
+		}catch(Exception ex){
+			System.out.println(ex.getMessage());
+		}
 	}
 	
 	
