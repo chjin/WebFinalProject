@@ -43,8 +43,13 @@
 					<li><a href="blog.html">회원가입</a></li>
 				</c:if>
 				
+				<li><a href="movie.do">영화</a></li>
 			</ul>
 		</div>
+		
+		<div id="top_padding"></div>
+		<!-- include -->
+		<jsp:include page="${jsp }"></jsp:include>
 	</div>
 </body>
 </html>
