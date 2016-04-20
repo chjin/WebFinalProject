@@ -8,8 +8,6 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
-import oracle.net.aso.p;
-
 public class MovieManager {
 	public static void main(String[] args){
 		MovieManager movieManger=new MovieManager();
@@ -21,6 +19,7 @@ public class MovieManager {
 		
 		try{
 			Document document= Jsoup.connect("http://www.cgv.co.kr/movies").get();
+			//System.out.println(document);
 			
 			Elements titleElement=document.select("div.box-contents strong.title");
 			Elements imageElement=document.select("div.box-image a span.thumb-image img");
@@ -29,7 +28,7 @@ public class MovieManager {
 			
 			
 			Elements percentElement=document.select("div.box-contents div.score strong.percent span");
-			Elements likeElement=document.select("div.box-contents span.like span.like span.count strong i");
+			Elements likeElement=document.select("div.box-contents span.like span.count strong i");
 			Elements starElement=document.select("div.box-contents span.percent");
 			Elements dayElement=document.select("div.box-contents span.txt-info strong");
 			
@@ -58,6 +57,8 @@ public class MovieManager {
 				movieDTO.setGrade(gElement.text());
 				
 				list.add(movieDTO);
+				
+				System.out.println("movieAllData ½ÇÇà");
 				
 			}
 			
