@@ -46,6 +46,11 @@
 				</c:forEach>
 			</tr>
 			<tr>
+				<c:forEach var="vo" items="${list }">
+					<td>
+						<font color=black><b>${vo.title }</b></font>
+					</td>
+				</c:forEach>
 			</tr>
 		</table>
 		

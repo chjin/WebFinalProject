@@ -11,7 +11,7 @@ import org.jsoup.select.Elements;
 public class MovieManager {
 	public static void main(String[] args){
 		MovieManager movieManger=new MovieManager();
-		movieManger.movieAllData();
+		
 	}
 	
 	public List<MovieDTO> movieAllData(){

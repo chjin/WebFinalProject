@@ -15,7 +15,8 @@ public class MovieController {
 	public String movie_main(HttpServletRequest req){
 		
 		MovieManager movieManager=new MovieManager();
-		//?
+	
+		
 		List<MovieDTO> list=movieManager.movieAllData();
 		req.setAttribute("list", list);
 		req.setAttribute("jsp", "movie/movie_main.jsp");
